@@ -1,0 +1,73 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{cancel}
+\usepackage{setspace} %Para modificar el interlineado
+
+%\graphicspath{{images/}}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+%\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+%\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Topología}
+
+\pagestyle{empty}
+
+%\renewcommand{\baselinestretch}{2} para modificar el interlineado en todo el doc
+
+\def\R{\mathds{R}}
+\def\Z{\mathds{Z}}
+\def\N{\mathds{N}}
+\def\S{\mathds{S}}
+
+\def\sup{$^2$}
+
+\def\next{\quad \Rightarrow \quad}
+
+\begin{document}
+    \doublespace
+
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    \begin{center}
+        {\large\bf{Topología II}} \\
+        \bf{Tercer parcial 2020}\\
+        
+    \end{center}
+
+    Consideremos una superficie compacta y conexa con presentación poligonal
+    $$P = \langle \{a,b,c,d,e,f,g,h,i,j,k\} ; ackb^{-1}af^{-1}, cdhg^{-1}je^{-1}j^{-1}, fik^{-1}eg^{-1}h^{-1}d^{-1}ib^{-1} \rangle$$
+    ¿A qué superficie modelo es homeomorfa? Señale sólo una:
+
+    \begin{enumerate}
+        \item La esfera
+        \item Suma conexa de 3 toros
+        \item Suma conexa de 4 toros
+        \item Suma conexa de 5 toros
+        \item Suma conexa de 6 planos proyectivos
+        \item Suma conexa de 7 planos proyectivos
+        \item Suma conexa de 8 planos proyectivos
+        \item Ninguna de las anteriores
+    \end{enumerate}
+
+    \newpage
+
+\end{document}
