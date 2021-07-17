@@ -1,0 +1,87 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{cancel}
+
+%\graphicspath{{images/}}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Topología}
+
+\pagestyle{empty}
+
+
+\def\R{\mathds{R}}
+\def\Z{\mathds{Z}}
+\def\N{\mathds{N}}
+
+\def\sup{$^2$}
+
+\def\next{\quad \Rightarrow \quad}
+
+\begin{document}
+
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    \begin{center}
+        {\large\bf{Topología II}} \\
+        \bf{David García Curbelo}\\
+        
+    \end{center}
+
+    \textbf{Ejercicio 37. } \textit{¿Es todo retracto de un espacio $X$ un retracto de deformación de $X$?}\\
+
+    Claramente el enunciado no es cierto. Para la construcción del contraejemplo basta con tomar un espacio topológico $X$
+    con grupo fundamental no trivial y el conjunto $A$ como cualquier punto suyo. Tomemos un ejemplo particular:
+
+    Consideremos $X = \mathbb{S}^1$ y $A = \{x_0\}$, con $x_0 \in X$ cualquier punto de la circunferencia. Consideremos también
+    la aplicación
+    $$
+    \begin{aligned}
+        r : & X \longrightarrow A \\
+            & x \longmapsto x_0
+    \end{aligned}
+    $$
+    la cual vemos fácilmente que es continua, ya que se trata de la aplicación constante que asigna a todo punto de $X$ el 
+    único punto del conjunto $A$. Además, considerando la aplicación inclusión $i_A : A \hookrightarrow X$ tenemos
+    $$(r \circ i_A)(x_0) = r(i_A(x_0)) = r(x_0) = x_0 \next r \circ i_A = 1_A$$
+    Con lo que concluimos que nuestra aplicación $r$ es una retracción.\\
+
+    %por la misma razón se tiene que $r|_A = \text{Id}_A$, luego tenemos que nuestra aplicación $A$ es un retracto de $X$. \\
+    %Tomemos también para nuestro estudio la aplicación inclusión $$i_A : A \hookrightarrow X$$
+    
+
+    Supongamos ahora que $A$ es un retracto de deformación de $X$. Si esto fuera así, tendríamos para todo elemento $a \in A$ el isomorfismo
+    dado por 
+    $$(i_A)_* : \Pi_1 (A, a) \longrightarrow \Pi_1 (X, a)$$
+    Y así tendríamos que $\Pi_1 (X, a)$ y $\Pi_1 (A, a)$ son isomorfos. Luego, de la misma manera, como $A = \{x_0\}$, tenemos que
+    $$\Pi_1 (X, x_0) \overset{iso}{\cong} \Pi_1 (A, x_0)$$
+    Pero esto no es verdad, ya que 
+    $$\Pi_1 (X, x_0) \overset{iso}{\cong} \Pi_1 (\mathbb{S}^1, x_0) \overset{iso}{\cong} \Z \quad \quad \quad \quad 
+    \Pi_1 (A, x_0) \overset{iso}{\cong} \Pi_1 (\{x_0\}, x_0) \overset{iso}{\cong} \{1\}$$
+    Luego hemos llegado a una contradicción, que está motivada por la única suposición que hemos hecho: $A\subset X$ es un retracto de deformación.
+    Queda así probado que no todo retracto de $X$ tiene por qué ser un retracto de deformación de $X$.
+
+    %Todo punto es un retracto del espacio que lo contiene. La aplicación constante $r: X \rightarrow \{x_0\}$
+
+\end{document}
