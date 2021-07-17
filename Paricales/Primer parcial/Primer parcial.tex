@@ -1,0 +1,78 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{cancel}
+\usepackage{setspace} %Para modificar el interlineado
+
+%\graphicspath{{images/}}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+
+%Estructura de ecuaciones
+%\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+%\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Topología}
+
+\pagestyle{empty}
+
+%\renewcommand{\baselinestretch}{2} para modificar el interlineado en todo el doc
+
+\def\R{\mathds{R}}
+\def\Z{\mathds{Z}}
+\def\N{\mathds{N}}
+\def\S{\mathds{S}}
+
+\def\sup{$^2$}
+
+\def\next{\quad \Rightarrow \quad}
+
+\begin{document}
+    \doublespace
+
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    \begin{center}
+        {\large\bf{Topología II}} \\
+        \bf{Primer parcial 2020}\\
+        
+    \end{center}
+
+    Sea $X_0$ el subespacio topológico de $\R^3$ dado por la unión $\S^2_{(0,0,0)} \cup \S^2_{(3,0,0)} \cup L$, donde $\S^2_{(0,0,0)}$ es la esfera 
+    de centro $(0,0,0)$ y radio 1, $\S^2_{(3,0,0)}$ es la esfera de centro $(3,0,0)$ y radio 1, y 
+    $L = \{(x,0,0) \in \R^3 \thinspace : \thickspace x \in [2,4]\}$ es el segmento que conecta los polos oeste y este de la esfera $\S^2_{(3,0,0)}$.
+    Observa que $X_0$ no es conexo, ni arcoconexo. Consideremos en $X_0$ la relación de equivalencia en la que dos puntos $p,q \in X_0$ están relacionados
+    si y sólo si pasa una de las tres siguientes posibilidades:
+    \begin{enumerate}
+        \item $p = q$
+        \item $\{p,q\} = \{(0,0,1), (3,0,1)\}$; es decir, identificamos polo norte de una esfera con polo norte de la otra.
+        \item $\{p,q\} = \{(0,0,-1), (3,0,-1)\}$; es decir, identificamos polo sur de una esfera con polo sur de la otra.
+    \end{enumerate}
+
+    Definimos $X$ como el espacio topológico cociente de $X_0$ por esta relación de equivalencia. Justificar que $X$ es arcoconexo y calcular su grupo 
+    fundamental (en el punto que se quiera).
+
+    \noindent
+    CONSEJO: Haz un dibujo de un subespacio topológico de $\R^3$ que sea homeomorfo a $X$ y calcula el grupo fundamental de ese subespacio (basta con un 
+    dibujo, no es necesario dar una descripción explícita del subespacio). 
+
+    \newpage
+
+
+\end{document}
