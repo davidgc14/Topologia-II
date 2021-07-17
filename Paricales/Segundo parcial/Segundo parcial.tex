@@ -1,0 +1,79 @@
+\documentclass[fleqn]{article}
+
+%\pgfplotsset{compat=1.17}
+
+\usepackage{mathexam}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{dsfont} %Numeros reales, naturales...
+\usepackage{cancel}
+\usepackage{setspace} %Para modificar el interlineado
+
+%\graphicspath{{images/}}
+\newcommand*{\QED}{\hfill\ensuremath{\square}}
+
+%Estructura de ecuaciones
+%\setlength{\textwidth}{15cm} \setlength{\oddsidemargin}{5mm}
+%\setlength{\textheight}{23cm} \setlength{\topmargin}{-1cm}
+
+
+
+\author{David García Curbelo}
+\title{Topología}
+
+\pagestyle{empty}
+
+%\renewcommand{\baselinestretch}{2} para modificar el interlineado en todo el doc
+
+\def\R{\mathds{R}}
+\def\Z{\mathds{Z}}
+\def\N{\mathds{N}}
+\def\S{\mathds{S}}
+
+\def\sup{$^2$}
+
+\def\next{\quad \Rightarrow \quad}
+
+\begin{document}
+    \doublespace
+
+    \setcounter{page}{1}
+    \pagestyle{plain}
+
+    \begin{center}
+        {\large\bf{Topología II}} \\
+        \bf{Segundo parcial 2020}\\
+        
+    \end{center}
+
+    \textbf{Ejercicio 1. } Sea $X$ un espacio topológico conexo y localmente arcoconexo y supongamos que $(\tilde{X}, \pi)$ es un recubridor universal
+    de $X$. Sean $x \in X$ un punto y $\alpha \in \Omega_x(X)$ un lazo de $X$ basado en el punto $x$ y supongamos que $\alpha$ no es homotópico al lazo constante
+    $\varepsilon_x$.
+
+    Decidir razonadamente si la siguiente afirmación es cierta o falsa:\\
+    \textit{Si $\tilde{\alpha}$ es un levantamiento de $\alpha$ a $(X, \pi)$, entonces $\tilde{\alpha} (0) \neq \tilde{\alpha} (1)$; es decir, 
+    $\tilde{\alpha}$ no es un lazo.} 
+
+    \newpage
+
+    \textbf{Ejercicio 2. } Sea $X$ un subespacio topológico de $\R^2$ dado por $X = \S^1 \cup L_1 \cup L_2$, donde $\S^1 = \{(x,y) \in \R^2 : x^2 + y^2 = 1\}$ es la 
+    circunferencia unidad, $L_1 = \{(x,0) \in \R^2 : x \in [-2,0] \}$ es el segmento cerrado de extremos $(-2,0)$ y $(0,0)$ y 
+    $L_2 = \{(x,0) \in \R^2 : x \in [1,2] \}$ es el segmento cerrado de extremos $(1,0)$ y $(2,0)$.
+    \begin{enumerate}
+        \item ¿Admite $X$ un recubridor de 31 hojas?
+        \item Determinar explicitamente un espacio recubridor de $X$.
+        \item Decidir razonadamente si la siguiente afirmación es cierta o falsa: \textit{Si $(\tilde{X}, \pi)$ es un espacio recubridor de $X$ y no es 
+                finito, entonces es recubridor universal.}
+    \end{enumerate}
+
+    \newpage
+
+
+\end{document}
